@@ -4,8 +4,10 @@
 local winmod = {}
 
 winmod.config = {
-   left_half   = { {"ctrl",        "cmd"}, "Left" },
-   right_half  = { {"ctrl",        "cmd"}, "Right" },
+   left_half   = { {"ctrl", "alt"       }, "Left" },
+   right_half  = { {"ctrl", "alt"       }, "Right" },
+--    left_half   = { {"ctrl",        "cmd"}, "Left" },
+--    right_half  = { {"ctrl",        "cmd"}, "Right" },
    top_half    = { {"ctrl",        "cmd"}, "Up" },
    bottom_half = { {"ctrl",        "cmd"}, "Down" },
    third_left  = { {"ctrl", "alt"       }, "Left" },
@@ -199,20 +201,20 @@ function winmod.bindKeys()
    -- Halves of the screen
    omh.bind(c.left_half, winmod.leftHalf)
    omh.bind(c.right_half, winmod.rightHalf)
-   omh.bind(c.top_half, winmod.topHalf)
-   omh.bind(c.bottom_half, winmod.bottomHalf)
-                                                        
-   -- Thirds of the screen                              
-   omh.bind(c.third_left, winmod.oneThirdLeft)
-   omh.bind(c.third_right, winmod.oneThirdRight)
-   omh.bind(c.third_up, winmod.oneThirdUp)
-   omh.bind(c.third_down, winmod.onethirdDown)
-                                                        
-   -- Maximized                                         
-   omh.bind(c.max_toggle, winmod.toggleMaximized)
+  --  omh.bind(c.top_half, winmod.topHalf)
+  --  omh.bind(c.bottom_half, winmod.bottomHalf)
+
+   -- Thirds of the screen
+  --  omh.bind(c.third_left, winmod.oneThirdLeft)
+  --  omh.bind(c.third_right, winmod.oneThirdRight)
+  --  omh.bind(c.third_up, winmod.oneThirdUp)
+  --  omh.bind(c.third_down, winmod.onethirdDown)
+
+   -- Maximized
+  --  omh.bind(c.max_toggle, winmod.toggleMaximized)
    omh.bind(c.max, winmod.maximize)
-                                                        
-   -- Move between screens                              
+
+   -- Move between screens
    omh.bind(c.screen_left, winmod.oneScreenLeft)
    omh.bind(c.screen_right, winmod.oneScreenRight)
 end
